@@ -1,0 +1,3478 @@
+{
+  "contractName": "RentalAgreement",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "createdTimestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "paidrents",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "rent",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tenant",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "state",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "landlord",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "house",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_rent",
+          "type": "uint256"
+        },
+        {
+          "name": "_house",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "agreementConfirmed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "paidRent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "contractTerminated",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getHouse",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLandlord",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getTenant",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getRent",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getContractCreated",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getContractAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getState",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "confirmAgreement",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "payRent",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "terminateContract",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b604051610d77380380610d77833981016040528080519060200190919080518201919050508160028190555080600390805190602001906100519291906100a1565b5033600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550426001819055505050610146565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100e257805160ff1916838001178555610110565b82800160010185558215610110579182015b8281111561010f5782518255916020019190600101906100f4565b5b50905061011d9190610121565b5090565b61014391905b8082111561013f576000816000905550600101610127565b5090565b90565b610c22806101556000396000f3006060604052600436106100f1576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304e2064f146100f65780630b3bb0241461018457806310309781146101d95780631865c57d146102025780632fd949ca1461023957806332a2c5d01461024e57806354dc7ccd146102a357806374017cee146102b857806382996d9f146102f65780639b9bedf81461031f578063a709c4fe14610348578063adf077911461035d578063c19d93fb146103b2578063dc1997ea146103e9578063e07195641461043e578063f502236d14610467578063ff9b3acf146104bc575b600080fd5b341561010157600080fd5b61010961054a565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561014957808201518184015260208101905061012e565b50505050905090810190601f1680156101765780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561018f57600080fd5b6101976105f2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156101e457600080fd5b6101ec61061c565b6040518082815260200191505060405180910390f35b341561020d57600080fd5b610215610622565b6040518082600281111561022557fe5b60ff16815260200191505060405180910390f35b341561024457600080fd5b61024c610639565b005b341561025957600080fd5b610261610756565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156102ae57600080fd5b6102b661075e565b005b34156102c357600080fd5b6102d96004808035906020019091905050610886565b604051808381526020018281526020019250505060405180910390f35b341561030157600080fd5b6103096108b9565b6040518082815260200191505060405180910390f35b341561032a57600080fd5b6103326108bf565b6040518082815260200191505060405180910390f35b341561035357600080fd5b61035b6108c9565b005b341561036857600080fd5b610370610a50565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156103bd57600080fd5b6103c5610a76565b604051808260028111156103d557fe5b60ff16815260200191505060405180910390f35b34156103f457600080fd5b6103fc610a89565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561044957600080fd5b610451610aaf565b6040518082815260200191505060405180910390f35b341561047257600080fd5b61047a610ab9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156104c757600080fd5b6104cf610ae3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561050f5780820151818401526020810190506104f4565b50505050905090810190601f16801561053c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610552610b81565b60038054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105e85780601f106105bd576101008083540402835291602001916105e8565b820191906000526020600020905b8154815290600101906020018083116105cb57829003601f168201915b5050505050905090565b6000600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60015481565b6000600560149054906101000a900460ff16905090565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561069557600080fd5b7f1a2c2a2bbbf9d5032486504e1d9485c159203e17fe39ab8eaeea298a97ad3f6860405160405180910390a1600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050506002600560146101000a81548160ff0219169083600281111561074f57fe5b0217905550565b600030905090565b600080600281111561076c57fe5b600560149054906101000a900460ff16600281111561078757fe5b14151561079357600080fd5b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614158015156107f157600080fd5b7fff274055432556a9f474da8c11df1d265e3bbf0e8eafad4f12bd72a9c175b4db60405160405180910390a133600560006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506001600560146101000a81548160ff0219169083600281111561087d57fe5b02179055505050565b60008181548110151561089557fe5b90600052602060002090600202016000915090508060000154908060010154905082565b60025481565b6000600154905090565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561092557600080fd5b600180600281111561093357fe5b600560149054906101000a900460ff16600281111561094e57fe5b14151561095a57600080fd5b600254341480151561096b57600080fd5b7fbade71dff67ec59cb8a653f4f7a5cd050285c740376f33d8570b0639d5a6d14960405160405180910390a1600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f193505050505060008054806001018281610a039190610b95565b916000526020600020906002020160006040805190810160405280600160008054905001815260200134815250909190915060008201518160000155602082015181600101555050505050565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600560149054906101000a900460ff1681565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600254905090565b6000600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60038054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610b795780601f10610b4e57610100808354040283529160200191610b79565b820191906000526020600020905b815481529060010190602001808311610b5c57829003601f168201915b505050505081565b602060405190810160405280600081525090565b815481835581811511610bc257600202816002028360005260206000209182019101610bc19190610bc7565b5b505050565b610bf391905b80821115610bef57600080820160009055600182016000905550600201610bcd565b5090565b905600a165627a7a72305820e87705743d8ea2630c8dee101cd509ff178bb7d639d956506473ae5c02fdd0360029",
+  "deployedBytecode": "0x6060604052600436106100f1576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304e2064f146100f65780630b3bb0241461018457806310309781146101d95780631865c57d146102025780632fd949ca1461023957806332a2c5d01461024e57806354dc7ccd146102a357806374017cee146102b857806382996d9f146102f65780639b9bedf81461031f578063a709c4fe14610348578063adf077911461035d578063c19d93fb146103b2578063dc1997ea146103e9578063e07195641461043e578063f502236d14610467578063ff9b3acf146104bc575b600080fd5b341561010157600080fd5b61010961054a565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561014957808201518184015260208101905061012e565b50505050905090810190601f1680156101765780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561018f57600080fd5b6101976105f2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156101e457600080fd5b6101ec61061c565b6040518082815260200191505060405180910390f35b341561020d57600080fd5b610215610622565b6040518082600281111561022557fe5b60ff16815260200191505060405180910390f35b341561024457600080fd5b61024c610639565b005b341561025957600080fd5b610261610756565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156102ae57600080fd5b6102b661075e565b005b34156102c357600080fd5b6102d96004808035906020019091905050610886565b604051808381526020018281526020019250505060405180910390f35b341561030157600080fd5b6103096108b9565b6040518082815260200191505060405180910390f35b341561032a57600080fd5b6103326108bf565b6040518082815260200191505060405180910390f35b341561035357600080fd5b61035b6108c9565b005b341561036857600080fd5b610370610a50565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156103bd57600080fd5b6103c5610a76565b604051808260028111156103d557fe5b60ff16815260200191505060405180910390f35b34156103f457600080fd5b6103fc610a89565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561044957600080fd5b610451610aaf565b6040518082815260200191505060405180910390f35b341561047257600080fd5b61047a610ab9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156104c757600080fd5b6104cf610ae3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561050f5780820151818401526020810190506104f4565b50505050905090810190601f16801561053c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610552610b81565b60038054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105e85780601f106105bd576101008083540402835291602001916105e8565b820191906000526020600020905b8154815290600101906020018083116105cb57829003601f168201915b5050505050905090565b6000600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60015481565b6000600560149054906101000a900460ff16905090565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561069557600080fd5b7f1a2c2a2bbbf9d5032486504e1d9485c159203e17fe39ab8eaeea298a97ad3f6860405160405180910390a1600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050506002600560146101000a81548160ff0219169083600281111561074f57fe5b0217905550565b600030905090565b600080600281111561076c57fe5b600560149054906101000a900460ff16600281111561078757fe5b14151561079357600080fd5b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614158015156107f157600080fd5b7fff274055432556a9f474da8c11df1d265e3bbf0e8eafad4f12bd72a9c175b4db60405160405180910390a133600560006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506001600560146101000a81548160ff0219169083600281111561087d57fe5b02179055505050565b60008181548110151561089557fe5b90600052602060002090600202016000915090508060000154908060010154905082565b60025481565b6000600154905090565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561092557600080fd5b600180600281111561093357fe5b600560149054906101000a900460ff16600281111561094e57fe5b14151561095a57600080fd5b600254341480151561096b57600080fd5b7fbade71dff67ec59cb8a653f4f7a5cd050285c740376f33d8570b0639d5a6d14960405160405180910390a1600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f193505050505060008054806001018281610a039190610b95565b916000526020600020906002020160006040805190810160405280600160008054905001815260200134815250909190915060008201518160000155602082015181600101555050505050565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600560149054906101000a900460ff1681565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600254905090565b6000600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60038054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610b795780601f10610b4e57610100808354040283529160200191610b79565b820191906000526020600020905b815481529060010190602001808311610b5c57829003601f168201915b505050505081565b602060405190810160405280600081525090565b815481835581811511610bc257600202816002028360005260206000209182019101610bc19190610bc7565b5b505050565b610bf391905b80821115610bef57600080820160009055600182016000905550600201610bcd565b5090565b905600a165627a7a72305820e87705743d8ea2630c8dee101cd509ff178bb7d639d956506473ae5c02fdd0360029",
+  "sourceMap": "24:2847:1:-;;;540:180;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;609:5;602:4;:12;;;;632:6;624:5;:14;;;;;;;;;;;;:::i;:::-;;659:10;648:8;;:21;;;;;;;;;;;;;;;;;;698:15;679:16;:34;;;;540:180;;24:2847;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "24:2847:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1277:75;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1446:78:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;279:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1798:65;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2621:248;;;;;;;;;;;;;;1707:85;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2045:192;;;;;;;;;;;;;;245:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;314:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1607:94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2243:265;;;;;;;;;;;;;;442:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;515:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;412:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1530:71;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1358:82;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;386:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1277:75:1;1315:6;;:::i;:::-;1340:5;1333:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1277:75;:::o;1446:78::-;1485:7;1511:6;;;;;;;;;;;1504:13;;1446:78;:::o;279:28::-;;;;:::o;1798:65::-;1827:5;1851;;;;;;;;;;;1844:12;;1798:65;:::o;2621:248::-;866:8;;;;;;;;;;;852:22;;:10;:22;;;;848:33;;;876:5;;;848:33;2681:20;;;;;;;;;;2711:8;;;;;;;;;;;:13;;:27;2725:4;:12;;;2711:27;;;;;;;;;;;;;;;;;;;;;;;;2846:16;2838:5;;:24;;;;;;;;;;;;;;;;;;;;;;;;2621:248::o;1707:85::-;1755:7;1781:4;1774:11;;1707:85;:::o;2045:192::-;2085:13;1044:6;1035:15;;;;;;;;:5;;;;;;;;;;;:15;;;;;;;;;;1031:26;;;1052:5;;;1031:26;2126:8;;;;;;;;;;;2112:22;;:10;:22;;;;774:10;773:11;769:22;;;786:5;;;769:22;2150:20;;;;;;;;;;2189:10;2180:6;;:19;;;;;;;;;;;;;;;;;;2217:13;2209:5;;:21;;;;;;;;;;;;;;;;;;;;;;;;1067:1;2045:192;:::o;245:27::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;314:16::-;;;;:::o;1607:94::-;1655:4;1678:16;;1671:23;;1607:94;:::o;2243:265::-;954:6;;;;;;;;;;;940:20;;:10;:20;;;;936:31;;;962:5;;;936:31;2289:13;1044:6;1035:15;;;;;;;;:5;;;;;;;;;;;:15;;;;;;;;;;1031:26;;;1052:5;;;1031:26;2329:4;;2316:9;:17;774:10;773:11;769:22;;;786:5;;;769:22;2349:10;;;;;;;;;;2369:8;;;;;;;;;;;:13;;:24;2383:9;2369:24;;;;;;;;;;;;;;;;;;;;;;;;2403:9;:98;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;2418:82;;;;;;;;;2461:1;2442:9;:16;;;;:20;2418:82;;;;2480:9;2418:82;;;2403:98;;;;;;;;;;;;;;;;;;;;;;;;1067:1;977;2243:265::o;442:21::-;;;;;;;;;;;;;:::o;515:18::-;;;;;;;;;;;;;:::o;412:23::-;;;;;;;;;;;;;:::o;1530:71::-;1567:4;1590;;1583:11;;1530:71;:::o;1358:82::-;1399:7;1425:8;;;;;;;;;;;1418:15;;1358:82;:::o;386:19::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;24:2847::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.0;\ncontract RentalAgreement {\n    /* This declares a new complex type which will hold the paid rents*/\n    struct PaidRent {\n    uint id; /* The paid rent id*/\n    uint value; /* The amount of rent that is paid*/\n    }\n\n    PaidRent[] public paidrents;\n\n    uint public createdTimestamp;\n\n    uint public rent;\n    /* Combination of zip code and house number*/\n    string public house;\n\n    address public landlord;\n\n    address public tenant;\n    enum State {Created, Started, Terminated}\n    State public state;\n\n    function RentalAgreement(uint _rent, string _house) {\n        rent = _rent;\n        house = _house;\n        landlord = msg.sender;\n        createdTimestamp = block.timestamp;\n    }\n    modifier require(bool _condition) {\n        if (!_condition) throw;\n        _;\n    }\n    modifier onlyLandlord() {\n        if (msg.sender != landlord) throw;\n        _;\n    }\n    modifier onlyTenant() {\n        if (msg.sender != tenant) throw;\n        _;\n    }\n    modifier inState(State _state) {\n        if (state != _state) throw;\n        _;\n    }\n\n    /* We also have some getters so that we can read the values\n    from the blockchain at any time */\n    function getPaidRents() internal returns (PaidRent[]) {\n        return paidrents;\n    }\n\n    function getHouse() constant returns (string) {\n        return house;\n    }\n\n    function getLandlord() constant returns (address) {\n        return landlord;\n    }\n\n    function getTenant() constant returns (address) {\n        return tenant;\n    }\n\n    function getRent() constant returns (uint) {\n        return rent;\n    }\n\n    function getContractCreated() constant returns (uint) {\n        return createdTimestamp;\n    }\n\n    function getContractAddress() constant returns (address) {\n        return this;\n    }\n\n    function getState() returns (State) {\n        return state;\n    }\n\n    /* Events for DApps to listen to */\n    event agreementConfirmed();\n\n    event paidRent();\n\n    event contractTerminated();\n\n    /* Confirm the lease agreement as tenant*/\n    function confirmAgreement()\n    inState(State.Created)\n    require(msg.sender != landlord)\n    {\n        agreementConfirmed();\n        tenant = msg.sender;\n        state = State.Started;\n    }\n\n    function payRent()\n    onlyTenant\n    inState(State.Started)\n    require(msg.value == rent)\n    {\n        paidRent();\n        landlord.send(msg.value);\n        paidrents.push(PaidRent({\n        id : paidrents.length + 1,\n        value : msg.value\n        }));\n    }\n    /* Terminate the contract so the tenant can’t pay rent anymore,\n    and the contract is terminated */\n    function terminateContract()\n    onlyLandlord\n    {\n        contractTerminated();\n        landlord.send(this.balance);\n        /* If there is any value on the\n               contract send it to the landlord*/\n        state = State.Terminated;\n    }\n}",
+  "sourcePath": "C:\\Users\\home\\training_feb8_rent\\contracts\\RentalAgreement.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/Users/home/training_feb8_rent/contracts/RentalAgreement.sol",
+      "exportedSymbols": {
+        "RentalAgreement": [
+          308
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".0"
+          ]
+        },
+        "id": 58,
+        "name": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            308
+          ],
+          "name": "RentalAgreement",
+          "scope": 309
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "RentalAgreement.PaidRent",
+              "name": "PaidRent",
+              "scope": 308,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "id",
+                  "scope": 63,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 59,
+                    "name": "ElementaryTypeName",
+                    "src": "150:4:1"
+                  }
+                ],
+                "id": 60,
+                "name": "VariableDeclaration",
+                "src": "150:7:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "value",
+                  "scope": 63,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 61,
+                    "name": "ElementaryTypeName",
+                    "src": "185:4:1"
+                  }
+                ],
+                "id": 62,
+                "name": "VariableDeclaration",
+                "src": "185:10:1"
+              }
+            ],
+            "id": 63,
+            "name": "StructDefinition",
+            "src": "128:111:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "paidrents",
+              "scope": 308,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct RentalAgreement.PaidRent storage ref[] storage ref",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct RentalAgreement.PaidRent storage ref[] storage pointer"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "PaidRent",
+                      "referencedDeclaration": 63,
+                      "type": "struct RentalAgreement.PaidRent storage pointer"
+                    },
+                    "id": 64,
+                    "name": "UserDefinedTypeName",
+                    "src": "245:8:1"
+                  }
+                ],
+                "id": 65,
+                "name": "ArrayTypeName",
+                "src": "245:10:1"
+              }
+            ],
+            "id": 66,
+            "name": "VariableDeclaration",
+            "src": "245:27:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "createdTimestamp",
+              "scope": 308,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 67,
+                "name": "ElementaryTypeName",
+                "src": "279:4:1"
+              }
+            ],
+            "id": 68,
+            "name": "VariableDeclaration",
+            "src": "279:28:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "rent",
+              "scope": 308,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 69,
+                "name": "ElementaryTypeName",
+                "src": "314:4:1"
+              }
+            ],
+            "id": 70,
+            "name": "VariableDeclaration",
+            "src": "314:16:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "house",
+              "scope": 308,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string storage ref",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string storage pointer"
+                },
+                "id": 71,
+                "name": "ElementaryTypeName",
+                "src": "386:6:1"
+              }
+            ],
+            "id": 72,
+            "name": "VariableDeclaration",
+            "src": "386:19:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "landlord",
+              "scope": 308,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 73,
+                "name": "ElementaryTypeName",
+                "src": "412:7:1"
+              }
+            ],
+            "id": 74,
+            "name": "VariableDeclaration",
+            "src": "412:23:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "tenant",
+              "scope": 308,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 75,
+                "name": "ElementaryTypeName",
+                "src": "442:7:1"
+              }
+            ],
+            "id": 76,
+            "name": "VariableDeclaration",
+            "src": "442:21:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "RentalAgreement.State",
+              "name": "State"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Created"
+                },
+                "id": 77,
+                "name": "EnumValue",
+                "src": "481:7:1"
+              },
+              {
+                "attributes": {
+                  "name": "Started"
+                },
+                "id": 78,
+                "name": "EnumValue",
+                "src": "490:7:1"
+              },
+              {
+                "attributes": {
+                  "name": "Terminated"
+                },
+                "id": 79,
+                "name": "EnumValue",
+                "src": "499:10:1"
+              }
+            ],
+            "id": 80,
+            "name": "EnumDefinition",
+            "src": "469:41:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "state",
+              "scope": 308,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "enum RentalAgreement.State",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "State",
+                  "referencedDeclaration": 80,
+                  "type": "enum RentalAgreement.State"
+                },
+                "id": 81,
+                "name": "UserDefinedTypeName",
+                "src": "515:5:1"
+              }
+            ],
+            "id": 82,
+            "name": "VariableDeclaration",
+            "src": "515:18:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "RentalAgreement",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_rent",
+                      "scope": 108,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 83,
+                        "name": "ElementaryTypeName",
+                        "src": "565:4:1"
+                      }
+                    ],
+                    "id": 84,
+                    "name": "VariableDeclaration",
+                    "src": "565:10:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_house",
+                      "scope": 108,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 85,
+                        "name": "ElementaryTypeName",
+                        "src": "577:6:1"
+                      }
+                    ],
+                    "id": 86,
+                    "name": "VariableDeclaration",
+                    "src": "577:13:1"
+                  }
+                ],
+                "id": 87,
+                "name": "ParameterList",
+                "src": "564:27:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 88,
+                "name": "ParameterList",
+                "src": "592:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 70,
+                              "type": "uint256",
+                              "value": "rent"
+                            },
+                            "id": 89,
+                            "name": "Identifier",
+                            "src": "602:4:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 84,
+                              "type": "uint256",
+                              "value": "_rent"
+                            },
+                            "id": 90,
+                            "name": "Identifier",
+                            "src": "609:5:1"
+                          }
+                        ],
+                        "id": 91,
+                        "name": "Assignment",
+                        "src": "602:12:1"
+                      }
+                    ],
+                    "id": 92,
+                    "name": "ExpressionStatement",
+                    "src": "602:12:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 72,
+                              "type": "string storage ref",
+                              "value": "house"
+                            },
+                            "id": 93,
+                            "name": "Identifier",
+                            "src": "624:5:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 86,
+                              "type": "string memory",
+                              "value": "_house"
+                            },
+                            "id": 94,
+                            "name": "Identifier",
+                            "src": "632:6:1"
+                          }
+                        ],
+                        "id": 95,
+                        "name": "Assignment",
+                        "src": "624:14:1"
+                      }
+                    ],
+                    "id": 96,
+                    "name": "ExpressionStatement",
+                    "src": "624:14:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 74,
+                              "type": "address",
+                              "value": "landlord"
+                            },
+                            "id": 97,
+                            "name": "Identifier",
+                            "src": "648:8:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 320,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 98,
+                                "name": "Identifier",
+                                "src": "659:3:1"
+                              }
+                            ],
+                            "id": 99,
+                            "name": "MemberAccess",
+                            "src": "659:10:1"
+                          }
+                        ],
+                        "id": 100,
+                        "name": "Assignment",
+                        "src": "648:21:1"
+                      }
+                    ],
+                    "id": 101,
+                    "name": "ExpressionStatement",
+                    "src": "648:21:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 68,
+                              "type": "uint256",
+                              "value": "createdTimestamp"
+                            },
+                            "id": 102,
+                            "name": "Identifier",
+                            "src": "679:16:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 312,
+                                  "type": "block",
+                                  "value": "block"
+                                },
+                                "id": 103,
+                                "name": "Identifier",
+                                "src": "698:5:1"
+                              }
+                            ],
+                            "id": 104,
+                            "name": "MemberAccess",
+                            "src": "698:15:1"
+                          }
+                        ],
+                        "id": 105,
+                        "name": "Assignment",
+                        "src": "679:34:1"
+                      }
+                    ],
+                    "id": 106,
+                    "name": "ExpressionStatement",
+                    "src": "679:34:1"
+                  }
+                ],
+                "id": 107,
+                "name": "Block",
+                "src": "592:128:1"
+              }
+            ],
+            "id": 108,
+            "name": "FunctionDefinition",
+            "src": "540:180:1"
+          },
+          {
+            "attributes": {
+              "name": "require",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_condition",
+                      "scope": 118,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 109,
+                        "name": "ElementaryTypeName",
+                        "src": "742:4:1"
+                      }
+                    ],
+                    "id": 110,
+                    "name": "VariableDeclaration",
+                    "src": "742:15:1"
+                  }
+                ],
+                "id": 111,
+                "name": "ParameterList",
+                "src": "741:17:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "!",
+                          "prefix": true,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 110,
+                              "type": "bool",
+                              "value": "_condition"
+                            },
+                            "id": 112,
+                            "name": "Identifier",
+                            "src": "774:10:1"
+                          }
+                        ],
+                        "id": 113,
+                        "name": "UnaryOperation",
+                        "src": "773:11:1"
+                      },
+                      {
+                        "children": [],
+                        "id": 114,
+                        "name": "Throw",
+                        "src": "786:5:1"
+                      }
+                    ],
+                    "id": 115,
+                    "name": "IfStatement",
+                    "src": "769:22:1"
+                  },
+                  {
+                    "id": 116,
+                    "name": "PlaceholderStatement",
+                    "src": "801:1:1"
+                  }
+                ],
+                "id": 117,
+                "name": "Block",
+                "src": "759:50:1"
+              }
+            ],
+            "id": 118,
+            "name": "ModifierDefinition",
+            "src": "725:84:1"
+          },
+          {
+            "attributes": {
+              "name": "onlyLandlord",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 119,
+                "name": "ParameterList",
+                "src": "835:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "!=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 320,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 120,
+                                "name": "Identifier",
+                                "src": "852:3:1"
+                              }
+                            ],
+                            "id": 121,
+                            "name": "MemberAccess",
+                            "src": "852:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 74,
+                              "type": "address",
+                              "value": "landlord"
+                            },
+                            "id": 122,
+                            "name": "Identifier",
+                            "src": "866:8:1"
+                          }
+                        ],
+                        "id": 123,
+                        "name": "BinaryOperation",
+                        "src": "852:22:1"
+                      },
+                      {
+                        "children": [],
+                        "id": 124,
+                        "name": "Throw",
+                        "src": "876:5:1"
+                      }
+                    ],
+                    "id": 125,
+                    "name": "IfStatement",
+                    "src": "848:33:1"
+                  },
+                  {
+                    "id": 126,
+                    "name": "PlaceholderStatement",
+                    "src": "891:1:1"
+                  }
+                ],
+                "id": 127,
+                "name": "Block",
+                "src": "838:61:1"
+              }
+            ],
+            "id": 128,
+            "name": "ModifierDefinition",
+            "src": "814:85:1"
+          },
+          {
+            "attributes": {
+              "name": "onlyTenant",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 129,
+                "name": "ParameterList",
+                "src": "923:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "!=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 320,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 130,
+                                "name": "Identifier",
+                                "src": "940:3:1"
+                              }
+                            ],
+                            "id": 131,
+                            "name": "MemberAccess",
+                            "src": "940:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 76,
+                              "type": "address",
+                              "value": "tenant"
+                            },
+                            "id": 132,
+                            "name": "Identifier",
+                            "src": "954:6:1"
+                          }
+                        ],
+                        "id": 133,
+                        "name": "BinaryOperation",
+                        "src": "940:20:1"
+                      },
+                      {
+                        "children": [],
+                        "id": 134,
+                        "name": "Throw",
+                        "src": "962:5:1"
+                      }
+                    ],
+                    "id": 135,
+                    "name": "IfStatement",
+                    "src": "936:31:1"
+                  },
+                  {
+                    "id": 136,
+                    "name": "PlaceholderStatement",
+                    "src": "977:1:1"
+                  }
+                ],
+                "id": 137,
+                "name": "Block",
+                "src": "926:59:1"
+              }
+            ],
+            "id": 138,
+            "name": "ModifierDefinition",
+            "src": "904:81:1"
+          },
+          {
+            "attributes": {
+              "name": "inState",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_state",
+                      "scope": 149,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum RentalAgreement.State",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "State",
+                          "referencedDeclaration": 80,
+                          "type": "enum RentalAgreement.State"
+                        },
+                        "id": 139,
+                        "name": "UserDefinedTypeName",
+                        "src": "1007:5:1"
+                      }
+                    ],
+                    "id": 140,
+                    "name": "VariableDeclaration",
+                    "src": "1007:12:1"
+                  }
+                ],
+                "id": 141,
+                "name": "ParameterList",
+                "src": "1006:14:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_State_$80",
+                            "typeString": "enum RentalAgreement.State"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "!=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 82,
+                              "type": "enum RentalAgreement.State",
+                              "value": "state"
+                            },
+                            "id": 142,
+                            "name": "Identifier",
+                            "src": "1035:5:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 140,
+                              "type": "enum RentalAgreement.State",
+                              "value": "_state"
+                            },
+                            "id": 143,
+                            "name": "Identifier",
+                            "src": "1044:6:1"
+                          }
+                        ],
+                        "id": 144,
+                        "name": "BinaryOperation",
+                        "src": "1035:15:1"
+                      },
+                      {
+                        "children": [],
+                        "id": 145,
+                        "name": "Throw",
+                        "src": "1052:5:1"
+                      }
+                    ],
+                    "id": 146,
+                    "name": "IfStatement",
+                    "src": "1031:26:1"
+                  },
+                  {
+                    "id": 147,
+                    "name": "PlaceholderStatement",
+                    "src": "1067:1:1"
+                  }
+                ],
+                "id": 148,
+                "name": "Block",
+                "src": "1021:54:1"
+              }
+            ],
+            "id": 149,
+            "name": "ModifierDefinition",
+            "src": "990:85:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getPaidRents",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 150,
+                "name": "ParameterList",
+                "src": "1205:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 158,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "struct RentalAgreement.PaidRent memory[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "struct RentalAgreement.PaidRent storage ref[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "PaidRent",
+                              "referencedDeclaration": 63,
+                              "type": "struct RentalAgreement.PaidRent storage pointer"
+                            },
+                            "id": 151,
+                            "name": "UserDefinedTypeName",
+                            "src": "1226:8:1"
+                          }
+                        ],
+                        "id": 152,
+                        "name": "ArrayTypeName",
+                        "src": "1226:10:1"
+                      }
+                    ],
+                    "id": 153,
+                    "name": "VariableDeclaration",
+                    "src": "1226:10:1"
+                  }
+                ],
+                "id": 154,
+                "name": "ParameterList",
+                "src": "1225:12:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 154
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 66,
+                          "type": "struct RentalAgreement.PaidRent storage ref[] storage ref",
+                          "value": "paidrents"
+                        },
+                        "id": 155,
+                        "name": "Identifier",
+                        "src": "1255:9:1"
+                      }
+                    ],
+                    "id": 156,
+                    "name": "Return",
+                    "src": "1248:16:1"
+                  }
+                ],
+                "id": 157,
+                "name": "Block",
+                "src": "1238:33:1"
+              }
+            ],
+            "id": 158,
+            "name": "FunctionDefinition",
+            "src": "1184:87:1"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getHouse",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 159,
+                "name": "ParameterList",
+                "src": "1294:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 166,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 160,
+                        "name": "ElementaryTypeName",
+                        "src": "1315:6:1"
+                      }
+                    ],
+                    "id": 161,
+                    "name": "VariableDeclaration",
+                    "src": "1315:6:1"
+                  }
+                ],
+                "id": 162,
+                "name": "ParameterList",
+                "src": "1314:8:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 162
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 72,
+                          "type": "string storage ref",
+                          "value": "house"
+                        },
+                        "id": 163,
+                        "name": "Identifier",
+                        "src": "1340:5:1"
+                      }
+                    ],
+                    "id": 164,
+                    "name": "Return",
+                    "src": "1333:12:1"
+                  }
+                ],
+                "id": 165,
+                "name": "Block",
+                "src": "1323:29:1"
+              }
+            ],
+            "id": 166,
+            "name": "FunctionDefinition",
+            "src": "1277:75:1"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getLandlord",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 167,
+                "name": "ParameterList",
+                "src": "1378:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 174,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 168,
+                        "name": "ElementaryTypeName",
+                        "src": "1399:7:1"
+                      }
+                    ],
+                    "id": 169,
+                    "name": "VariableDeclaration",
+                    "src": "1399:7:1"
+                  }
+                ],
+                "id": 170,
+                "name": "ParameterList",
+                "src": "1398:9:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 170
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 74,
+                          "type": "address",
+                          "value": "landlord"
+                        },
+                        "id": 171,
+                        "name": "Identifier",
+                        "src": "1425:8:1"
+                      }
+                    ],
+                    "id": 172,
+                    "name": "Return",
+                    "src": "1418:15:1"
+                  }
+                ],
+                "id": 173,
+                "name": "Block",
+                "src": "1408:32:1"
+              }
+            ],
+            "id": 174,
+            "name": "FunctionDefinition",
+            "src": "1358:82:1"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getTenant",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 175,
+                "name": "ParameterList",
+                "src": "1464:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 182,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 176,
+                        "name": "ElementaryTypeName",
+                        "src": "1485:7:1"
+                      }
+                    ],
+                    "id": 177,
+                    "name": "VariableDeclaration",
+                    "src": "1485:7:1"
+                  }
+                ],
+                "id": 178,
+                "name": "ParameterList",
+                "src": "1484:9:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 178
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 76,
+                          "type": "address",
+                          "value": "tenant"
+                        },
+                        "id": 179,
+                        "name": "Identifier",
+                        "src": "1511:6:1"
+                      }
+                    ],
+                    "id": 180,
+                    "name": "Return",
+                    "src": "1504:13:1"
+                  }
+                ],
+                "id": 181,
+                "name": "Block",
+                "src": "1494:30:1"
+              }
+            ],
+            "id": 182,
+            "name": "FunctionDefinition",
+            "src": "1446:78:1"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getRent",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 183,
+                "name": "ParameterList",
+                "src": "1546:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 190,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 184,
+                        "name": "ElementaryTypeName",
+                        "src": "1567:4:1"
+                      }
+                    ],
+                    "id": 185,
+                    "name": "VariableDeclaration",
+                    "src": "1567:4:1"
+                  }
+                ],
+                "id": 186,
+                "name": "ParameterList",
+                "src": "1566:6:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 186
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 70,
+                          "type": "uint256",
+                          "value": "rent"
+                        },
+                        "id": 187,
+                        "name": "Identifier",
+                        "src": "1590:4:1"
+                      }
+                    ],
+                    "id": 188,
+                    "name": "Return",
+                    "src": "1583:11:1"
+                  }
+                ],
+                "id": 189,
+                "name": "Block",
+                "src": "1573:28:1"
+              }
+            ],
+            "id": 190,
+            "name": "FunctionDefinition",
+            "src": "1530:71:1"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getContractCreated",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 191,
+                "name": "ParameterList",
+                "src": "1634:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 198,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 192,
+                        "name": "ElementaryTypeName",
+                        "src": "1655:4:1"
+                      }
+                    ],
+                    "id": 193,
+                    "name": "VariableDeclaration",
+                    "src": "1655:4:1"
+                  }
+                ],
+                "id": 194,
+                "name": "ParameterList",
+                "src": "1654:6:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 194
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 68,
+                          "type": "uint256",
+                          "value": "createdTimestamp"
+                        },
+                        "id": 195,
+                        "name": "Identifier",
+                        "src": "1678:16:1"
+                      }
+                    ],
+                    "id": 196,
+                    "name": "Return",
+                    "src": "1671:23:1"
+                  }
+                ],
+                "id": 197,
+                "name": "Block",
+                "src": "1661:40:1"
+              }
+            ],
+            "id": 198,
+            "name": "FunctionDefinition",
+            "src": "1607:94:1"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getContractAddress",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 199,
+                "name": "ParameterList",
+                "src": "1734:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 206,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 200,
+                        "name": "ElementaryTypeName",
+                        "src": "1755:7:1"
+                      }
+                    ],
+                    "id": 201,
+                    "name": "VariableDeclaration",
+                    "src": "1755:7:1"
+                  }
+                ],
+                "id": 202,
+                "name": "ParameterList",
+                "src": "1754:9:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 202
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 333,
+                          "type": "contract RentalAgreement",
+                          "value": "this"
+                        },
+                        "id": 203,
+                        "name": "Identifier",
+                        "src": "1781:4:1"
+                      }
+                    ],
+                    "id": 204,
+                    "name": "Return",
+                    "src": "1774:11:1"
+                  }
+                ],
+                "id": 205,
+                "name": "Block",
+                "src": "1764:28:1"
+              }
+            ],
+            "id": 206,
+            "name": "FunctionDefinition",
+            "src": "1707:85:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getState",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 207,
+                "name": "ParameterList",
+                "src": "1815:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 214,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum RentalAgreement.State",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "State",
+                          "referencedDeclaration": 80,
+                          "type": "enum RentalAgreement.State"
+                        },
+                        "id": 208,
+                        "name": "UserDefinedTypeName",
+                        "src": "1827:5:1"
+                      }
+                    ],
+                    "id": 209,
+                    "name": "VariableDeclaration",
+                    "src": "1827:5:1"
+                  }
+                ],
+                "id": 210,
+                "name": "ParameterList",
+                "src": "1826:7:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 210
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 82,
+                          "type": "enum RentalAgreement.State",
+                          "value": "state"
+                        },
+                        "id": 211,
+                        "name": "Identifier",
+                        "src": "1851:5:1"
+                      }
+                    ],
+                    "id": 212,
+                    "name": "Return",
+                    "src": "1844:12:1"
+                  }
+                ],
+                "id": 213,
+                "name": "Block",
+                "src": "1834:29:1"
+              }
+            ],
+            "id": 214,
+            "name": "FunctionDefinition",
+            "src": "1798:65:1"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "agreementConfirmed"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 215,
+                "name": "ParameterList",
+                "src": "1933:2:1"
+              }
+            ],
+            "id": 216,
+            "name": "EventDefinition",
+            "src": "1909:27:1"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "paidRent"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 217,
+                "name": "ParameterList",
+                "src": "1956:2:1"
+              }
+            ],
+            "id": 218,
+            "name": "EventDefinition",
+            "src": "1942:17:1"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "contractTerminated"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 219,
+                "name": "ParameterList",
+                "src": "1989:2:1"
+              }
+            ],
+            "id": 220,
+            "name": "EventDefinition",
+            "src": "1965:27:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "confirmAgreement",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 221,
+                "name": "ParameterList",
+                "src": "2070:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 232,
+                "name": "ParameterList",
+                "src": "2140:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 149,
+                      "type": "modifier (enum RentalAgreement.State)",
+                      "value": "inState"
+                    },
+                    "id": 222,
+                    "name": "Identifier",
+                    "src": "2077:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "Created",
+                      "referencedDeclaration": null,
+                      "type": "enum RentalAgreement.State"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 80,
+                          "type": "type(enum RentalAgreement.State)",
+                          "value": "State"
+                        },
+                        "id": 223,
+                        "name": "Identifier",
+                        "src": "2085:5:1"
+                      }
+                    ],
+                    "id": 224,
+                    "name": "MemberAccess",
+                    "src": "2085:13:1"
+                  }
+                ],
+                "id": 225,
+                "name": "ModifierInvocation",
+                "src": "2077:22:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 118,
+                      "type": "modifier (bool)",
+                      "value": "require"
+                    },
+                    "id": 226,
+                    "name": "Identifier",
+                    "src": "2104:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "operator": "!=",
+                      "type": "bool"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "sender",
+                          "referencedDeclaration": null,
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 320,
+                              "type": "msg",
+                              "value": "msg"
+                            },
+                            "id": 227,
+                            "name": "Identifier",
+                            "src": "2112:3:1"
+                          }
+                        ],
+                        "id": 228,
+                        "name": "MemberAccess",
+                        "src": "2112:10:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 74,
+                          "type": "address",
+                          "value": "landlord"
+                        },
+                        "id": 229,
+                        "name": "Identifier",
+                        "src": "2126:8:1"
+                      }
+                    ],
+                    "id": 230,
+                    "name": "BinaryOperation",
+                    "src": "2112:22:1"
+                  }
+                ],
+                "id": 231,
+                "name": "ModifierInvocation",
+                "src": "2104:31:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 216,
+                              "type": "function ()",
+                              "value": "agreementConfirmed"
+                            },
+                            "id": 233,
+                            "name": "Identifier",
+                            "src": "2150:18:1"
+                          }
+                        ],
+                        "id": 234,
+                        "name": "FunctionCall",
+                        "src": "2150:20:1"
+                      }
+                    ],
+                    "id": 235,
+                    "name": "ExpressionStatement",
+                    "src": "2150:20:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 76,
+                              "type": "address",
+                              "value": "tenant"
+                            },
+                            "id": 236,
+                            "name": "Identifier",
+                            "src": "2180:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 320,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 237,
+                                "name": "Identifier",
+                                "src": "2189:3:1"
+                              }
+                            ],
+                            "id": 238,
+                            "name": "MemberAccess",
+                            "src": "2189:10:1"
+                          }
+                        ],
+                        "id": 239,
+                        "name": "Assignment",
+                        "src": "2180:19:1"
+                      }
+                    ],
+                    "id": 240,
+                    "name": "ExpressionStatement",
+                    "src": "2180:19:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum RentalAgreement.State"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 82,
+                              "type": "enum RentalAgreement.State",
+                              "value": "state"
+                            },
+                            "id": 241,
+                            "name": "Identifier",
+                            "src": "2209:5:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Started",
+                              "referencedDeclaration": null,
+                              "type": "enum RentalAgreement.State"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 80,
+                                  "type": "type(enum RentalAgreement.State)",
+                                  "value": "State"
+                                },
+                                "id": 242,
+                                "name": "Identifier",
+                                "src": "2217:5:1"
+                              }
+                            ],
+                            "id": 243,
+                            "name": "MemberAccess",
+                            "src": "2217:13:1"
+                          }
+                        ],
+                        "id": 244,
+                        "name": "Assignment",
+                        "src": "2209:21:1"
+                      }
+                    ],
+                    "id": 245,
+                    "name": "ExpressionStatement",
+                    "src": "2209:21:1"
+                  }
+                ],
+                "id": 246,
+                "name": "Block",
+                "src": "2140:97:1"
+              }
+            ],
+            "id": 247,
+            "name": "FunctionDefinition",
+            "src": "2045:192:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "payRent",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 248,
+                "name": "ParameterList",
+                "src": "2259:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 261,
+                "name": "ParameterList",
+                "src": "2339:0:1"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 138,
+                      "type": "modifier ()",
+                      "value": "onlyTenant"
+                    },
+                    "id": 249,
+                    "name": "Identifier",
+                    "src": "2266:10:1"
+                  }
+                ],
+                "id": 250,
+                "name": "ModifierInvocation",
+                "src": "2266:10:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 149,
+                      "type": "modifier (enum RentalAgreement.State)",
+                      "value": "inState"
+                    },
+                    "id": 251,
+                    "name": "Identifier",
+                    "src": "2281:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "Started",
+                      "referencedDeclaration": null,
+                      "type": "enum RentalAgreement.State"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 80,
+                          "type": "type(enum RentalAgreement.State)",
+                          "value": "State"
+                        },
+                        "id": 252,
+                        "name": "Identifier",
+                        "src": "2289:5:1"
+                      }
+                    ],
+                    "id": 253,
+                    "name": "MemberAccess",
+                    "src": "2289:13:1"
+                  }
+                ],
+                "id": 254,
+                "name": "ModifierInvocation",
+                "src": "2281:22:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 118,
+                      "type": "modifier (bool)",
+                      "value": "require"
+                    },
+                    "id": 255,
+                    "name": "Identifier",
+                    "src": "2308:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "operator": "==",
+                      "type": "bool"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "value",
+                          "referencedDeclaration": null,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 320,
+                              "type": "msg",
+                              "value": "msg"
+                            },
+                            "id": 256,
+                            "name": "Identifier",
+                            "src": "2316:3:1"
+                          }
+                        ],
+                        "id": 257,
+                        "name": "MemberAccess",
+                        "src": "2316:9:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 70,
+                          "type": "uint256",
+                          "value": "rent"
+                        },
+                        "id": 258,
+                        "name": "Identifier",
+                        "src": "2329:4:1"
+                      }
+                    ],
+                    "id": 259,
+                    "name": "BinaryOperation",
+                    "src": "2316:17:1"
+                  }
+                ],
+                "id": 260,
+                "name": "ModifierInvocation",
+                "src": "2308:26:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 218,
+                              "type": "function ()",
+                              "value": "paidRent"
+                            },
+                            "id": 262,
+                            "name": "Identifier",
+                            "src": "2349:8:1"
+                          }
+                        ],
+                        "id": 263,
+                        "name": "FunctionCall",
+                        "src": "2349:10:1"
+                      }
+                    ],
+                    "id": 264,
+                    "name": "ExpressionStatement",
+                    "src": "2349:10:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "send",
+                              "referencedDeclaration": null,
+                              "type": "function (uint256) returns (bool)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 74,
+                                  "type": "address",
+                                  "value": "landlord"
+                                },
+                                "id": 265,
+                                "name": "Identifier",
+                                "src": "2369:8:1"
+                              }
+                            ],
+                            "id": 267,
+                            "name": "MemberAccess",
+                            "src": "2369:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "value",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 320,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 268,
+                                "name": "Identifier",
+                                "src": "2383:3:1"
+                              }
+                            ],
+                            "id": 269,
+                            "name": "MemberAccess",
+                            "src": "2383:9:1"
+                          }
+                        ],
+                        "id": 270,
+                        "name": "FunctionCall",
+                        "src": "2369:24:1"
+                      }
+                    ],
+                    "id": 271,
+                    "name": "ExpressionStatement",
+                    "src": "2369:24:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_PaidRent_$63_memory",
+                                  "typeString": "struct RentalAgreement.PaidRent memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct RentalAgreement.PaidRent storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 66,
+                                  "type": "struct RentalAgreement.PaidRent storage ref[] storage ref",
+                                  "value": "paidrents"
+                                },
+                                "id": 272,
+                                "name": "Identifier",
+                                "src": "2403:9:1"
+                              }
+                            ],
+                            "id": 274,
+                            "name": "MemberAccess",
+                            "src": "2403:14:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                "id",
+                                "value"
+                              ],
+                              "type": "struct RentalAgreement.PaidRent memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 63,
+                                  "type": "type(struct RentalAgreement.PaidRent storage pointer)",
+                                  "value": "PaidRent"
+                                },
+                                "id": 275,
+                                "name": "Identifier",
+                                "src": "2418:8:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "+",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "length",
+                                      "referencedDeclaration": null,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 66,
+                                          "type": "struct RentalAgreement.PaidRent storage ref[] storage ref",
+                                          "value": "paidrents"
+                                        },
+                                        "id": 276,
+                                        "name": "Identifier",
+                                        "src": "2442:9:1"
+                                      }
+                                    ],
+                                    "id": 277,
+                                    "name": "MemberAccess",
+                                    "src": "2442:16:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "31",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 1",
+                                      "value": "1"
+                                    },
+                                    "id": 278,
+                                    "name": "Literal",
+                                    "src": "2461:1:1"
+                                  }
+                                ],
+                                "id": 279,
+                                "name": "BinaryOperation",
+                                "src": "2442:20:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "value",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 320,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 280,
+                                    "name": "Identifier",
+                                    "src": "2480:3:1"
+                                  }
+                                ],
+                                "id": 281,
+                                "name": "MemberAccess",
+                                "src": "2480:9:1"
+                              }
+                            ],
+                            "id": 282,
+                            "name": "FunctionCall",
+                            "src": "2418:82:1"
+                          }
+                        ],
+                        "id": 283,
+                        "name": "FunctionCall",
+                        "src": "2403:98:1"
+                      }
+                    ],
+                    "id": 284,
+                    "name": "ExpressionStatement",
+                    "src": "2403:98:1"
+                  }
+                ],
+                "id": 285,
+                "name": "Block",
+                "src": "2339:169:1"
+              }
+            ],
+            "id": 286,
+            "name": "FunctionDefinition",
+            "src": "2243:265:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "terminateContract",
+              "payable": false,
+              "scope": 308,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 287,
+                "name": "ParameterList",
+                "src": "2647:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 290,
+                "name": "ParameterList",
+                "src": "2671:0:1"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 128,
+                      "type": "modifier ()",
+                      "value": "onlyLandlord"
+                    },
+                    "id": 288,
+                    "name": "Identifier",
+                    "src": "2654:12:1"
+                  }
+                ],
+                "id": 289,
+                "name": "ModifierInvocation",
+                "src": "2654:12:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 220,
+                              "type": "function ()",
+                              "value": "contractTerminated"
+                            },
+                            "id": 291,
+                            "name": "Identifier",
+                            "src": "2681:18:1"
+                          }
+                        ],
+                        "id": 292,
+                        "name": "FunctionCall",
+                        "src": "2681:20:1"
+                      }
+                    ],
+                    "id": 293,
+                    "name": "ExpressionStatement",
+                    "src": "2681:20:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "send",
+                              "referencedDeclaration": null,
+                              "type": "function (uint256) returns (bool)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 74,
+                                  "type": "address",
+                                  "value": "landlord"
+                                },
+                                "id": 294,
+                                "name": "Identifier",
+                                "src": "2711:8:1"
+                              }
+                            ],
+                            "id": 296,
+                            "name": "MemberAccess",
+                            "src": "2711:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "balance",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 333,
+                                  "type": "contract RentalAgreement",
+                                  "value": "this"
+                                },
+                                "id": 297,
+                                "name": "Identifier",
+                                "src": "2725:4:1"
+                              }
+                            ],
+                            "id": 298,
+                            "name": "MemberAccess",
+                            "src": "2725:12:1"
+                          }
+                        ],
+                        "id": 299,
+                        "name": "FunctionCall",
+                        "src": "2711:27:1"
+                      }
+                    ],
+                    "id": 300,
+                    "name": "ExpressionStatement",
+                    "src": "2711:27:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum RentalAgreement.State"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 82,
+                              "type": "enum RentalAgreement.State",
+                              "value": "state"
+                            },
+                            "id": 301,
+                            "name": "Identifier",
+                            "src": "2838:5:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Terminated",
+                              "referencedDeclaration": null,
+                              "type": "enum RentalAgreement.State"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 80,
+                                  "type": "type(enum RentalAgreement.State)",
+                                  "value": "State"
+                                },
+                                "id": 302,
+                                "name": "Identifier",
+                                "src": "2846:5:1"
+                              }
+                            ],
+                            "id": 303,
+                            "name": "MemberAccess",
+                            "src": "2846:16:1"
+                          }
+                        ],
+                        "id": 304,
+                        "name": "Assignment",
+                        "src": "2838:24:1"
+                      }
+                    ],
+                    "id": 305,
+                    "name": "ExpressionStatement",
+                    "src": "2838:24:1"
+                  }
+                ],
+                "id": 306,
+                "name": "Block",
+                "src": "2671:198:1"
+              }
+            ],
+            "id": 307,
+            "name": "FunctionDefinition",
+            "src": "2621:248:1"
+          }
+        ],
+        "id": 308,
+        "name": "ContractDefinition",
+        "src": "24:2847:1"
+      }
+    ],
+    "id": 309,
+    "name": "SourceUnit",
+    "src": "0:2871:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
+  "networks": {
+    "1517984658022": {
+      "events": {},
+      "links": {},
+      "address": "0xb91c6a4371df67a5de70de9adcbab1c5776ace0a"
+    },
+    "1517992099568": {
+      "events": {},
+      "links": {},
+      "address": "0x706d1a49d9029bffccdd45f3aa5d8b8f9092e844"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-07T08:28:39.281Z"
+}
